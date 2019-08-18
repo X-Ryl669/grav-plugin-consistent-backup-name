@@ -1,0 +1,28 @@
+name: ConsistentBackupName
+version: 1.0.0
+description: "ConsistentBackupName let the last backup be accessible via LATEST.zip."
+icon: dashboard
+author:
+  name: Cyril RUSSO
+  email: fwd.rebootisme@pho.by
+  url: http://getgrav.org
+homepage: https://github.com/X-Ryl669/grav-plugin-consistent-backup-name
+keywords: "static, backup, plugin, name"
+bugs: https://github.com/X-Ryl669/grav-plugin-consistent-backup-name/issues
+license: MIT
+
+form:
+  validation: strict
+  fields:
+
+    enabled:
+      type: toggle
+      label: Plugin Status
+      highlight: 1
+      default: 1
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+
