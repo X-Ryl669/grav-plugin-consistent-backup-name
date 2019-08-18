@@ -31,10 +31,11 @@ class ConsistentBackupNamePlugin extends Plugin
     /**
      * Save the page to the cache
      */
-    public function onBackupGenerated(Event $event)
+    public function onBackupFinished($event)
     {
         $dest = $event['backup'];
         $link = dirname($dest) . DIRECTORY_SEPARATOR . 'LATEST.zip';
+	@unlink($link);
         symlink($dest, $link);
     }
 }
